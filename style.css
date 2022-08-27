@@ -4,6 +4,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+/* color pallet */
+
+/* #0C2228 */
+/* #B52D29 */
+/* #FFFFFF */
+
+/* */
+
 html {
     scroll-behavior: smooth;
 }
@@ -22,7 +30,7 @@ body {
     margin: 40px 0 0 140px;
 }
 
-.audiowide, pre {
+.audiowide, pre, .dif {
     font-family: 'Audiowide', cursive;
     font-size: 60px;
     line-height: 1.5;
@@ -31,9 +39,6 @@ body {
 }
 
 .dif {
-    margin: 0;
-    font-size: 60px;
-    font-family: 'Audiowide', cursive;
     background: -webkit-linear-gradient(45deg, rgb(99, 89, 159), rgb(0, 0, 0));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -129,6 +134,8 @@ body {
     margin-left: 140px;
 }
 
+/* button */
+
 button {
   letter-spacing: 1px;
   background: rgb(46, 46, 46);
@@ -143,6 +150,7 @@ button {
   transition: 0.01s 0.23s ease-out all;
   overflow: hidden;
 }
+
 button:before {
   content: "";
   position: absolute;
@@ -154,6 +162,7 @@ button:before {
   z-index: -1;
   transition: 0.3s ease-in all;
 }
+
 button:after {
   content: "";
   position: absolute;
@@ -165,10 +174,12 @@ button:after {
   z-index: -1;
   transition: 0.4s 0.02s ease-in all;
 }
+
 button:hover {
   cursor: pointer;
   color: transparent;
 }
+
 button:hover:before {
   left: 100%;
   width: 25%;
@@ -177,11 +188,13 @@ button:hover:after {
   left: 100%;
   width: 70%;
 }
+
 button:hover .icon-right.after:after {
   left: -80px;
   color: white;
   transition: 0.2s 0.2s ease all;
 }
+
 button:hover .icon-right.after:before {
   left: -104px;
   top: 14px;
@@ -194,6 +207,7 @@ button:hover .icon-right.after:before {
   top: 0;
   right: 0;
 }
+
 .icon-right:after {
   font-family: "FontAwesome";
   content: "→";
@@ -203,11 +217,13 @@ button:hover .icon-right.after:before {
   top: 26px;
   transform: translate3D(0, -50%, 0);
 }
+
 .icon-right.after:after {
   left: -250px;
   color: black;
   transition: 0.15s 0.25s ease left, 0.5s 0.05s ease color;
 }
+
 .icon-right.after:before {
   content: "Explore";
   position: absolute;
@@ -216,6 +232,8 @@ button:hover .icon-right.after:before {
   opacity: 0;
   transition: 0.2s ease-in all;
 }
+
+/* topnav */
 
 .topnav {
     display: flex;
@@ -246,43 +264,7 @@ button:hover .icon-right.after:before {
     color: rgb(0, 0, 0);
 }
 
-.about {
-    height: 100vh;
-    width: 100vw;
-}
-
-.touch {
-    width: 330px;
-    height: 50px;
-    color: aliceblue;
-    font-size: 60px;
-    position: absolute;
-    margin-bottom: auto;
-    margin-right: auto;
-    top: 8%;
-    bottom: 0;
-    left: 5%;
-    right: 0;
-}
-
-.touch p {
-    margin: 0;
-    font-family: 'Lobster', cursive;
-}
-
-.copyright {
-    width: 260px;
-    height: 50px;
-    color: aliceblue;
-    font-size: medium;
-    position: absolute;
-    margin-top: auto;
-    margin-left: auto;
-    top: 0;
-    bottom: 5%;
-    left: 0;
-    right: 5%;
-}
+/* design */
 
 .design1 {
     display: flex;
@@ -339,6 +321,46 @@ button:hover .icon-right.after:before {
 .cardtext h2 {
     margin-bottom: 20px;
     color: #d1d1d1;
+}
+
+/* about */
+
+.about {
+    height: 100vh;
+    width: 100vw;
+}
+
+.touch p {
+    margin: 0;
+    font-family: 'Lobster', cursive;
+}
+
+.copyright {
+    width: 260px;
+    height: 50px;
+    color: aliceblue;
+    font-size: medium;
+    position: absolute;
+    margin-top: auto;
+    margin-left: auto;
+    top: 0;
+    bottom: 5%;
+    left: 0;
+    right: 5%;
+}
+
+.touch {
+    width: 330px;
+    height: 50px;
+    color: aliceblue;
+    font-size: 60px;
+    position: absolute;
+    margin-bottom: auto;
+    margin-right: auto;
+    top: 8%;
+    bottom: 0;
+    left: 5%;
+    right: 0;
 }
 
 @media only screen and (max-width: 1000px) {
