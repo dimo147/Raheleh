@@ -28,7 +28,7 @@ body {
 
 .text1 {
     width: 425px;
-    margin: 40px 0 0 6.5%;
+    margin: 40px 0 0 6%;
 }
 
 .audiowide, pre, .dif {
@@ -81,7 +81,7 @@ body {
 .logo {
     margin: 0;
     margin-right: auto;
-    padding: 18px 16px 18px 16px;
+    padding: 18px 16px 18px 0px;
     font-family: 'Marck Script', cursive;
     font-size: 28px;
 }

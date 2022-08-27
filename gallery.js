@@ -1,6 +1,5 @@
-AOS.init();
 var splide = new Splide( '.splide', {
-    focus  : 'left',
+    focus  : 'center',
     type   : 'loop',
     autoplay: true,
     autoWidth: true,

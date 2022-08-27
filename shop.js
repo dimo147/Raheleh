@@ -1,4 +1,3 @@
-AOS.init();
 var splide = new Splide( '.splide', {
     focus  : 'left',
     type   : 'loop',
