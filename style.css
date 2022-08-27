@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 
 /* color pallet */
 
@@ -26,12 +27,13 @@ body {
 /* landing page */
 
 .text1 {
-    width: 400px;
-    margin: 40px 0 0 140px;
+    width: 425px;
+    margin: 40px 0 0 6.5%;
 }
 
 .audiowide, pre, .dif {
-    font-family: 'Audiowide', cursive;
+    /* font-family: 'Audiowide', cursive; */
+    font-family: 'Aboreto', cursive;
     font-size: 60px;
     line-height: 1.5;
     margin: 0;
@@ -39,15 +41,41 @@ body {
 }
 
 .dif {
-    background: -webkit-linear-gradient(45deg, rgb(99, 89, 159), rgb(0, 0, 0));
+    background: -webkit-linear-gradient(45deg, #2c809a, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.s1 {
+    color: #ffffff;
+}
+
+.backbox {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.lback {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./images/house_3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lcolor {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
 }
 
 .landing {
     height: 100vh;
     width: 100vw;
-    background: -webkit-linear-gradient(90deg, rgb(233, 233, 233), rgb(255, 255, 255));
+    margin: 0;
 }
 
 .logo {
@@ -59,32 +87,26 @@ body {
 }
 
 .profile {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     z-index: 2;
-    border-radius: 100px;
+    border-radius: 120px;
     margin-top: 75px;
 }
 
 .circle {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     background-color: #FA4A4A;
-    border-radius: 100px;
-    margin-left: -45px;
+    border-radius: 120px;
+    margin-left: -65px;
     z-index: 1;
     margin-top: 75px;
 }
 
 .dotcircle {
-    width: 250px;
-    height: 250px;
-    border: 5px dotted rgba(0, 0, 0, 0.225);
-    border-radius: 100%;
-    z-index: 0;
-    justify-content: center;
     margin-left: auto;
-    margin-right: 170px;
+    margin-right: 7.5%;
     margin-top: 20px;
     margin-bottom: auto;
 }
@@ -97,12 +119,12 @@ body {
     margin-top: auto;
     margin-left: auto;
     margin-bottom: 4.5%;
-    margin-right: 4%;
+    margin-right: 6%;
 }
 
 .icons i {
     font-size: 22px;
-    color: rgb(40, 40, 40);
+    color: rgb(197, 197, 197);
     margin-right: 35px;
 }
 
@@ -110,7 +132,7 @@ body {
     width: 350px;
     margin-bottom: 40px;
     line-height: 1.8;
-    color: rgb(35, 35, 35);
+    color: rgb(255, 255, 255);
 }
 
 .painting {
@@ -233,12 +255,31 @@ button:hover .icon-right.after:before {
   transition: 0.2s ease-in all;
 }
 
+.slideimg img {
+    height: 240px;
+    margin-right: 120px;
+    border-radius: 5%;
+}
+
+.slideimg .splide__track {
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.slideimg {
+    height: 290px;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 3%;
+}
+
 /* topnav */
 
 .topnav {
     display: flex;
     overflow: hidden;
-    margin: 20px 6% 0 6%;
+    margin: 0 6% 0 6%;
+    padding-top: 20px;
 }
 
 .pages {
@@ -248,7 +289,7 @@ button:hover .icon-right.after:before {
 
 .topnav a {
     margin-right: 50px;
-    color: #545454;
+    color: #aaaaaa;
     text-align: center;
     padding: 18px 16px;
     text-decoration: none;
@@ -261,7 +302,7 @@ button:hover .icon-right.after:before {
 }
   
 .topnav a.active {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 /* design */
@@ -270,28 +311,36 @@ button:hover .icon-right.after:before {
     display: flex;
     margin-left: 15%;
     margin-right: 15%;
+    width: 100vw;
+    height: 100vh;
 }
 
 .design2 {
     display: flex;
     margin-left: 11%;
     margin-right: 11%;
+    width: 100vw;
+    height: 100vh;
 }
 
 .design2 img {
     margin-bottom: 80px;
     height: 75vh;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .design1 img {
     margin-bottom: 80px;
     height: 80vh;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .card1 {
     width: 600px;
-    height: 250px;
-    background-color: #212121;
+    height: 220;
+    background-color: #B52D29;
     display: flex;
     align-items: center;
     padding: 40px;
@@ -301,8 +350,8 @@ button:hover .icon-right.after:before {
 }
 .card2 {
     width: 600px;
-    height: 250px;
-    background-color: #212121;
+    height: 220;
+    background-color: #B52D29;
     display: flex;
     align-items: center;
     padding: 40px;
@@ -313,14 +362,14 @@ button:hover .icon-right.after:before {
 }
 
 .cardtext {
-    color: #eaeaea;
+    color: #ffffff;
     margin-bottom: 10px;
     line-height: 1.5;
 }
 
 .cardtext h2 {
     margin-bottom: 20px;
-    color: #d1d1d1;
+    color: #ffffff;
 }
 
 /* about */
