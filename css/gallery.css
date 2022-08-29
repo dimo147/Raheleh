@@ -119,3 +119,15 @@ body {
 @media (min-width: 900px) {
     .grid-container { grid-template-columns: repeat(3, 1fr); }
 }
+
+@media (max-width: 550px) {
+    .pages {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        text-align: right;
+    }
+    .topnav a {
+        margin-right: 0;
+    }
+}
