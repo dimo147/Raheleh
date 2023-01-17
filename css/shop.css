@@ -212,6 +212,9 @@ body {
         margin-right: 0;
         margin-bottom: 5%;
     }
+    .description {
+        width: 100%;
+    }
     .painting {
         width: 100%;
         max-height: 90%;

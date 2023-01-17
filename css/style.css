@@ -9,6 +9,18 @@
 /* #FFFFFF */
 /* #232323 */
 
+/* fonts */
+
+@font-face {
+    font-family: Nephilm;
+    src: url(../fonts/Nephilm.otf);
+}
+
+@font-face {
+    font-family: TheNightWatch;
+    src: url(../fonts/TheNightWatch.ttf);
+}
+
 /* */
 
 html {
@@ -34,7 +46,7 @@ body {
 }
 
 .audiowide, pre, .dif {
-    font-family: 'Aboreto', cursive;
+    font-family: 'Nephilm';
     font-size: 60px;
     line-height: 1.5;
     margin: 0;
@@ -52,15 +64,14 @@ body {
 }
 
 .backbox {
-    position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
 }
 
 .lback {
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-image: url("../images/painting_9.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -69,12 +80,12 @@ body {
 .lcolor {
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.709);
 }
 
 .landing {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     margin: 0;
     display: flex;
@@ -168,7 +179,7 @@ body {
     display: flex;
     overflow: hidden;
     margin: 0 6% 0 6%;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 .pages {
@@ -337,7 +348,7 @@ body {
 
 .touch p {
     margin: 0;
-    font-family: 'Aboreto', cursive;
+    font-family: 'Nephilm';
 }
 
 .copyright {
@@ -503,19 +514,12 @@ body {
     .text1 {
         width: 270px;
     }
-    .audiowide, pre {
-        font-size: 40px;
-    }
-    .dif {
+    .audiowide, pre, .dif {
         font-size: 40px;
     }
     .logo {
         margin-right: auto;
         padding: 18px 16px 18px 0;
-    }
-    .ppr {
-        margin-right: 40px;
-        margin-top: 40px;
     }
 }
 
@@ -536,7 +540,7 @@ body {
         margin-top: 3%;
     }
     .pages{
-        display: inline-block;
+        display: block;
         overflow: visible;
         margin: 0;
         margin-left: auto;
@@ -545,9 +549,10 @@ body {
         width: 110px;
     }
     .topnav a {
-        float: right;
+        float: left;
         margin-left: 0;
         margin-top: 5px;
+        padding: 10px 2px;
     }
 }
 
@@ -557,29 +562,27 @@ body {
     }
     .text1 {
         width: 220px;
-        font-size: 30px;
-        margin: 40px auto;
+        margin: 20px auto;
     }
 }
 
-@media only screen and (max-width: 365px) {
+@media only screen and (max-width: 347px) {
     .logo {
         display: none;
     }
-}
-
-@media only screen and (max-height: 700px) {
+    .pages{
+        margin-left: 0;
+        margin-top: 5px;
+        margin-right: auto;
+    }
     .topnav {
-        padding-top: 0;
-    }
-    .landing {
-        justify-content: start;
+        margin: 0 15% 0 15%;
     }
 }
 
-@media only screen and (min-height: 700px) and (max-width: 600px){
-    .landing {
-        justify-content: start;
+@media only screen and (max-width: 600px) {
+    .slideimg {
+        margin-bottom: 100px;
     }
 }
 
