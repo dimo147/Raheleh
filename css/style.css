@@ -45,18 +45,24 @@ body {
     margin: 40px 0 0 6%;
 }
 
-.audiowide, pre, .dif {
+.audiowide, pre{
     font-family: 'Nephilm';
-    font-size: 60px;
+    font-size: 35px;
     line-height: 1.5;
     margin: 0;
+    color: #000000ca;
 
 }
 
 .dif {
-    background: -webkit-linear-gradient(45deg, #2c809a, #ffffff);
+    background: -webkit-linear-gradient(45deg, #5900FF, #ff8af3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 60px;
+    font-family: 'Nephilm';
+    line-height: 1.5;
+    margin: 0;
 }
 
 .s1 {
@@ -65,57 +71,28 @@ body {
 
 .backbox {
     width: 100vw;
-    height: 100%;
-}
-
-.lback {
-    position: absolute;
-    width: 100vw;
-    height: 100%;
-    background-image: url("../images/painting_9.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.lcolor {
-    position: absolute;
-    width: 100vw;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.709);
+    height: 100vh;
+    background-color: #EBF5EE;
+    color: black;
 }
 
 .landing {
-    height: 100%;
-    width: 100vw;
-    margin: 0;
+    margin-top: 5%;
+}
+
+.rerow {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
 }
 
-.profile {
-    width: 120px;
-    height: 120px;
-    z-index: 2;
-    border-radius: 120px;
-    margin-top: 75px;
-}
-
-.circle {
-    width: 120px;
-    height: 120px;
-    background-color: #FA4A4A;
-    border-radius: 120px;
-    margin-left: -65px;
-    z-index: 1;
-    margin-top: 75px;
-}
-
-.dotcircle {
+.brg {
+    background-color: #5900FF;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
     margin-left: auto;
-    margin-right: 7.5%;
     margin-top: 20px;
-    margin-bottom: auto;
+    display: block;
 }
 
 .icons {
@@ -129,17 +106,59 @@ body {
     margin-right: 6%;
 }
 
+.anim1 {
+    opacity: 0;
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transform: translateY(70px);
+}
+
+.anim2 {
+    opacity: 0;
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transform: translateY(70px);
+}
+
+.anim3 {
+    opacity: 0;
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transform: translateY(70px);
+}
+
+.anim4 {
+    opacity: 0;
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transform: translateY(70px);
+}
+
+.anim5 {
+    opacity: 0;
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transform: translateY(70px);
+}
+
+.animE {
+    opacity: 0;
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transform: translateY(70px);
+}
+
 .icons i {
     font-size: 22px;
     color: rgb(197, 197, 197);
     margin-right: 35px;
 }
 
-.desc {
-    width: 350px;
-    margin-bottom: 40px;
-    line-height: 1.8;
-    color: rgb(255, 255, 255);
+.ldec {
+    width: 425px;
+    margin: 20px 0 0 6%;
+    font-size: 26px;
+    line-height: 1.5;
 }
 
 .row {
@@ -148,30 +167,29 @@ body {
 
 .column {
     display: block;
-    margin-top: 50px;
     margin-left: 140px;
 }
 
-/* slider */
-
-.slideimg img {
-    height: 240px;
-    margin-right: 100px;
-    border-radius: 5%;
+@media only screen and (max-width: 1200px){
+    .column {
+        margin-left: 50px;
+    }
+}
+@media only screen and (max-width: 800px){
+    .column {
+        margin-left: 20px;
+    }
+    .brg {
+        margin-right: 20%;
+    }
+}
+@media only screen and (max-width: 800px){
+    .brg {
+        margin-right: auto;
+        margin-left: 30px;
+    }
 }
 
-.slideimg .splide__track {
-    margin-left: 6%;
-    margin-right: 6%;
-}
-
-.slideimg {
-    height: 260px;
-    margin-left: 1%;
-    margin-right: 1%;
-    margin-top: 3%;
-    margin-bottom: 5%;
-}
 
 /* topnav */
 
@@ -197,7 +215,7 @@ body {
 
 .topnav a {
     margin-left: 50px;
-    color: #aaaaaa;
+    color: #0000008e;
     text-align: center;
     padding: 18px 16px;
     text-decoration: none;
@@ -206,11 +224,11 @@ body {
 }
 
 .topnav a:hover {
-    color: rgb(54, 54, 54);
+    color: rgb(0, 0, 0);
 }
   
 .topnav a.active {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 .auth {
@@ -220,7 +238,7 @@ body {
 }
 
 .signup {
-    color: white;
+    color: rgb(0, 0, 0);
     background-color: transparent;
     border: 0 none;
     width: 80px;
@@ -232,8 +250,8 @@ body {
 }
 
 .login {
-    color: black;
-    background-color: white;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     border: 0 none;
     width: 80px;
     height: 30px;
@@ -241,6 +259,93 @@ body {
     border-radius: 5px;
     font-size: 16px;
     margin-right: 30px;
+}
+
+/* portrait */
+
+.rrow {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+}
+
+.abt {
+    width: 550px;
+    color: rgba(255, 255, 255, 0.706);
+    margin-bottom: auto;
+    font-size: 21px;
+    line-height: 1.8;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+span {
+    color: white;
+}
+
+.rrow h2 {
+    margin-top: auto;
+    margin-bottom: 5px;
+    margin-left: -1px;
+    color: white;
+    font-size: 32px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.rrow img {
+    width: 380px;
+    height: auto;
+    border-radius: 15px;
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 1200px){
+    .rrow {
+        margin: 0 8%;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .abt {
+        width: 450px;
+        font-size: 19px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .rrow img {
+        width: 250px;
+    }
+    .abt {
+        width: 400px;
+        font-size: 18px;
+    }
+    .rrow h2 {
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .rrow {
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 10%;
+    }
+    .rrow img {
+        margin: 0;
+        margin-bottom: 50px;
+        margin-top: -40px;
+    }
+    .abt {
+        width: 100%;
+        font-size: 18px;
+        line-height: 1.6;
+    }
 }
 
 /* design */
@@ -260,17 +365,19 @@ body {
 }
 
 .design2 img {
-    width: 45%;
+    width: 35%;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: auto;
+    border-radius: 15px;
 }
 
 .design1 img {
-    width: 45%;
+    width: 35%;
     margin-top: auto;
     margin-bottom: auto;
     margin-right: auto;
+    border-radius: 15px;
 }
 
 .card1 {
@@ -367,7 +474,7 @@ body {
 
 .touch {
     width: 460px;
-    height: 50px;
+    height: 80px;
     color: aliceblue;
     font-size: 60px;
     position: absolute;
@@ -377,6 +484,65 @@ body {
     bottom: 0;
     left: 5%;
     right: 0;
+}
+
+/* slideShow */
+.mySlides {
+    display: none;
+}
+
+.slideshow-container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-container img {
+    border-radius: 20px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 1000px){
+    .slideshow-container {
+        width: 300px;
+        height: 300px;
+    }
+    .text1 {
+        width: 340px;
+    }
+    .dif {
+        font-size: 50px;
+    }
+    .ldec {
+        font-size: 24px;
+        width: 340px;
+    }
+}
+
+@media only screen and (max-width: 750px) and (min-height: 600px){
+    .slideshow-container {
+        width: 60%;
+        margin-top: 5%;
+    }
+    .rerow {
+        flex-direction: column;
+    }
+    .ldec {
+        display: none;
+    }
+    .text1 {
+        margin: 10px 0 0 6%;
+    }
 }
 
 /* Social Buttons */
@@ -468,7 +634,7 @@ body {
 @media only screen and (max-width: 600px) {
     .touch {
         width: 220px;
-        height: 55px;
+        height: 120px;
         font-size: 45px;
         left: 8%;
     }
@@ -554,14 +720,14 @@ body {
         margin-top: 5px;
         padding: 10px 2px;
     }
+    .slideshow-container {
+        width: 75%;
+    }
 }
 
 @media only screen and (max-width: 430px) {
-    .dotcircle {
-        display: none;
-    }
     .text1 {
-        width: 220px;
+        width: 280px;
         margin: 20px auto;
     }
 }
@@ -588,7 +754,7 @@ body {
 
 @media only screen and (max-height: 800px) and (max-width: 430px) {
     .text1 {
-        width: 220px;
+        width: 280px;
         margin: 5px auto;
     }
 }
