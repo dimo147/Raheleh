@@ -208,7 +208,7 @@ body {
 .logo {
     margin: 0;
     margin-right: auto;
-    padding: 18px 16px 18px 0px;
+    padding: 8px 16px 8px 0px;
     font-family: 'Marck Script', cursive;
     font-size: 28px;
 }
@@ -710,9 +710,10 @@ span {
         overflow: visible;
         margin: 0;
         margin-left: auto;
-        margin-top: 16px;
-        margin-right: 16px;
-        width: 110px;
+        margin-top: 8px;
+        margin-right: 0;
+        width: 80px;
+        float: right;
     }
     .topnav a {
         float: left;
@@ -723,12 +724,18 @@ span {
     .slideshow-container {
         width: 75%;
     }
+    .social-btns {
+        margin: auto 60px;
+    }
+    .social-btns .btn {
+        margin: 20px 20px;
+    }
 }
 
 @media only screen and (max-width: 430px) {
     .text1 {
         width: 280px;
-        margin: 20px auto;
+        margin: 0 30px;
     }
 }
 
