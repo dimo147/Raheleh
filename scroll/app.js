@@ -1,5 +1,5 @@
 new fullpage('#fullpage', {
-    anchors: ['home', 'Raheleh Mirheydari', 'painting1', 'painting2', 'about'],
+    anchors: ['home', 'Raheleh_Mirheydari', 'painting1', 'painting2', 'about'],
     navigationTooltips: ['Home', 'About', 'Painting1', 'Painting2', 'Contact'],
     autoScrolling: true,
     sectionsColor: ['#000000', "#1E1E1E", '#241924', '#212134', '#000009'],
