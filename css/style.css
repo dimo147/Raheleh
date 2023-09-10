@@ -17,9 +17,10 @@
 }
 
 @font-face {
-    font-family: TheNightWatch;
-    src: url(../fonts/TheNightWatch.ttf);
+    font-family: BeyondSkyTrial;
+    src: url(../fonts/RichieBrusher-l2yy.ttf);
 }
+
 
 /* */
 
@@ -106,42 +107,7 @@ body {
     margin-right: 6%;
 }
 
-.anim1 {
-    opacity: 0;
-    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-    transform: translateY(70px);
-}
-
-.anim2 {
-    opacity: 0;
-    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-    transform: translateY(70px);
-}
-
-.anim3 {
-    opacity: 0;
-    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-    transform: translateY(70px);
-}
-
-.anim4 {
-    opacity: 0;
-    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-    transform: translateY(70px);
-}
-
-.anim5 {
-    opacity: 0;
-    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-    transform: translateY(70px);
-}
-
-.animE {
+.anim1, .anim2, .anim3, .anim4, .anim5, .animE {
     opacity: 0;
     -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
             clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
@@ -266,21 +232,28 @@ body {
 .rrow {
     display: flex;
     justify-content: space-between;
-    margin: 0 10%;
+    margin: 0 7%;
 }
 
 .abt {
-    width: 550px;
+    width: 85%;
     color: rgba(255, 255, 255, 0.706);
     margin-bottom: auto;
-    font-size: 21px;
+    font-size: 19px;
     line-height: 1.8;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 span {
     color: white;
+}
+
+.cl {
+    background: -webkit-linear-gradient(45deg, #7226ff, #ff8af3);
+    -webkit-background-clip: text;
+    font-weight: 600;
+    -webkit-text-fill-color: transparent;
 }
 
 .rrow h2 {
@@ -296,11 +269,14 @@ span {
     flex-direction: column;
 }
 
-.rrow img {
-    width: 380px;
-    height: auto;
+.portrait {
+    width: 322px;
+    height: 429px;
     border-radius: 15px;
     margin-left: 20px;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-right: 4%;
 }
 
 @media only screen and (max-width: 1200px){
@@ -317,8 +293,9 @@ span {
 }
 
 @media only screen and (max-width: 1000px){
-    .rrow img {
+    .portrait {
         width: 250px;
+        height: 354px;
     }
     .abt {
         width: 400px;
@@ -334,17 +311,61 @@ span {
         flex-direction: column-reverse;
         justify-content: space-evenly;
         align-items: center;
-        margin: 0 10%;
+        margin: 0 5%;
     }
-    .rrow img {
+    .portrait {
+        width: 190px;
+        height: 297px;
         margin: 0;
-        margin-bottom: 50px;
-        margin-top: -40px;
+        margin-bottom: 15%;
+        margin-top: -10%;
     }
     .abt {
         width: 100%;
-        font-size: 18px;
-        line-height: 1.6;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+    .rrow h2 {
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-height: 800px) {
+    .rrow h2 {
+        font-size: 28px;
+    }
+    .portrait {
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-height: 750px) {
+    .rrow h2 {
+        font-size: 28px;
+    }
+    .portrait {
+        margin-bottom: 20px;
+        margin-top: 0;
+        width: 180px;
+        height: 287px;
+    }
+}
+
+@media only screen and (max-height: 705px) {
+    .rrow h2 {
+        font-size: 24px;
+    }
+    .portrait {
+        margin-bottom: 20px;
+        margin-top: 0;
+        width: 140px;
+        height: 247px;
+        margin-left: -60%;
+    }
+    .abt {
+        line-height: 1.1 !important;
     }
 }
 
@@ -566,11 +587,11 @@ span {
 .social-btns .btn.facebook .fa {
   color: #3b5998;
 }
-.social-btns .btn.twitter:before {
-  background-color: #3cf;
+.social-btns .btn.instagram:before {
+  background-color: #833AB4;
 }
-.social-btns .btn.twitter .fa {
-  color: #3cf;
+.social-btns .btn.instagram .fa {
+  color: #833AB4;
 }
 .social-btns .btn.google:before {
   background-color: #dc4a38;
@@ -578,11 +599,11 @@ span {
 .social-btns .btn.google .fa {
   color: #dc4a38;
 }
-.social-btns .btn.skype:before {
-  background-color: #00aff0;
+.social-btns .btn.linkedin:before {
+  background-color: #0e76a8;
 }
-.social-btns .btn.skype .fa {
-  color: #00aff0;
+.social-btns .btn.linkedin .fa {
+  color: #0e76a8;
 }
 .social-btns .btn:focus:before,
 .social-btns .btn:hover:before {
@@ -694,6 +715,9 @@ span {
         margin-right: auto;
         padding: 18px 16px 18px 0;
     }
+    .topnav a.active {
+        display: none;
+    }
     .slideimg img {
         height: 200px;
         margin-right: 60px;
@@ -770,14 +794,6 @@ span {
 @media only screen and (max-height: 750px) {
     .brg {
         display: none;
-    }
-    .rrow h2 {
-        font-size: 28px;
-    }
-    .rrow img {
-        margin-bottom: 20px;
-        margin-top: 0;
-        width: 230px;
     }
     .touch {
         top: 5%;

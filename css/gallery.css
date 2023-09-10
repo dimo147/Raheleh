@@ -14,8 +14,8 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-    background-color: #262626;
-    color: white;
+    background-color: #EBF5EE;
+    color: black;
     padding: 0 6%;
 }
 
@@ -43,7 +43,7 @@ body {
 
 .topnav a {
     margin-right: 50px;
-    color: #aaaaaa;
+    color: #00000097;
     text-align: center;
     padding: 18px 16px;
     text-decoration: none;
@@ -52,11 +52,11 @@ body {
 }
 
 .topnav a:hover {
-    color: rgb(54, 54, 54);
+    color: rgb(25, 25, 25);
 }
   
 .topnav a.active {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 /* Grid */
@@ -96,11 +96,11 @@ body {
 	position: absolute;
 	left: 0;
 	top: 0;
-	border: 1px solid #dddddd;
+	border: 1px solid #000000;
 	padding: 5px;
 	width: 250px;
 	height: 250px;
-	background: #f0f0f0;
+	background: #474747;
 }
 
 .gallery li img:hover {
@@ -112,15 +112,21 @@ body {
 	left: 75%;
 }
 
-@media (min-width: 600px) {
+@media only screen and (min-width: 600px) {
     .grid-container { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (min-width: 900px) {
+@media only screen and (min-width: 900px) {
     .grid-container { grid-template-columns: repeat(3, 1fr); }
 }
 
-@media (max-width: 550px) {
+@media only screen and (max-width: 566px) {
+    .topnav a.active {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 550px) {
     .pages {
         display: flex;
         flex-direction: column;
