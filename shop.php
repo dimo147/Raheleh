@@ -7,25 +7,41 @@
     <link rel="stylesheet" href="./css/shop.css">
     <link rel="stylesheet" href="./splide/dist/css/splide.min.css">
     <script src="./splide/dist/js/splide.min.js"></script>
-    <title>Shop</title>
+    <?php
+      $host_name = 'db5014435154.hosting-data.io';
+      $username = 'dbu1598703';
+      $password = 'Nemat1319';
+      $database = 'dbs12003862';
+
+      $conn = new mysqli($host_name, $username, $password, $database);
+
+      if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+      }
+      $p_id = $_GET['p'];
+      $sql = "SELECT * FROM paintings WHERE " . $p_id;
+      $result = $conn->query($sql);
+      $painting = $result->fetch_assoc();
+    ?>
+    <title><?php echo $painting["name"]; ?></title>
 </head>
 <body>
     <div class="topnav">
       <p class="logo">Rahele Mirheydari</p>
       <div class="pages">
-          <a href="home/">Home</a>
-          <a href="gallery/">Gallery</a>
-          <a href="contact/">Contact</a>
+          <a href="/">Home</a>
+          <a href="/gallery.php">Art works</a>
+          <a href="/#about">Contact</a>
       </div>
     </div>
     <hr>
     <div class="wrapper">
-        <img class="painting" src="./images/E.jpg" alt="painting">
+        <img class="painting" src="./images/<?php echo $painting["image"]; ?>" alt="painting">
         <div class="desc">
-            <p class="title">Green Field</p>
-            <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde atque veniam culpa odio, enim aperiam in corrupti aliquid fugiat hic quod repudiandae, debitis quibusdam, natus asperiores nulla fuga quo nostrum.</p>
+            <p class="title"><?php echo $painting["name"]; ?></p>
+            <p class="description"><?php echo $painting["description"]; ?></p>
             <div class="row pricebox">
-                <p class="price">$ 1,600</p>
+                <p class="price">$ <?php echo $painting["price"]; ?></p>
                 <button class="button">
                     <span class="button__text">
                       <span>buy now</span>
@@ -74,6 +90,9 @@
           </div>
         </section>
     </div>
+    <?php
+      $conn->close();
+    ?>
     <script src="./js/shop.js"></script>
 </body>
 </html>
