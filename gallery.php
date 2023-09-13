@@ -35,7 +35,7 @@
 
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
-                    echo "<a href='/shop.php?p=" . $row['id'] . "'><li><img src=" . "./images/" . $row["image"] . "></li></a>";
+                    echo "<a href='/shop.php?p=" . $row['id'] . "'><li><img src=" . "./images/paintings/" . $row["image"] . "></li></a>";
                 }
             } else {
                 echo "no paintings";

@@ -19,15 +19,18 @@
           die("Connection failed: " . $conn->connect_error);
       }
       $p_id = $_GET['p'];
-      $sql = "SELECT * FROM paintings WHERE " . $p_id;
+      $sql = "SELECT * FROM paintings WHERE id=" . $p_id;
       $result = $conn->query($sql);
       $painting = $result->fetch_assoc();
+
+      $sql = "SELECT * FROM paintings LIMIT 10";
+      $slides = $conn->query($sql);
     ?>
     <title><?php echo $painting["name"]; ?></title>
 </head>
 <body>
     <div class="topnav">
-      <p class="logo">Rahele Mirheydari</p>
+      <p class="logo">Riley Mirheydari</p>
       <div class="pages">
           <a href="/">Home</a>
           <a href="/gallery.php">Art works</a>
@@ -36,7 +39,7 @@
     </div>
     <hr>
     <div class="wrapper">
-        <img class="painting" src="./images/<?php echo $painting["image"]; ?>" alt="painting">
+        <img class="painting" src="./images/paintings/<?php echo $painting["image"]; ?>" alt="painting">
         <div class="desc">
             <p class="title"><?php echo $painting["name"]; ?></p>
             <p class="description"><?php echo $painting["description"]; ?></p>
@@ -80,12 +83,15 @@
         <section class="splide slideimg" aria-labelledby="carousel-heading">
           <div class="splide__track">
             <ul class="splide__list">
-              <li class="splide__slide"><img src="/images/A.jpg" alt="painting"></li>
-              <li class="splide__slide"><img src="/images/B.jpg" alt="painting"></li>
-              <li class="splide__slide"><img src="/images/C.jpg" alt="painting"></li>
-              <li class="splide__slide"><img src="/images/D.jpg" alt="painting"></li>
-              <li class="splide__slide"><img src="/images/E.jpg" alt="painting"></li>
-              <li class="splide__slide"><img src="/images/G.jpg" alt="painting"></li>
+              <?php 
+              if ($slides->num_rows > 0) {
+                while($row = $slides->fetch_assoc()) {
+                    echo "<li class='splide__slide'><a href='/shop.php?p=" . $row['id'] . "'><img src='/images/paintings/" . $row['image'] . "' alt='painting'></a></li>";
+                }
+              } else {
+                  echo "no paintings";
+              }
+              ?>
             </ul>
           </div>
         </section>

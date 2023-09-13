@@ -9,6 +9,20 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
     <title>Home</title>
+    <?php
+      $host_name = 'db5014435154.hosting-data.io';
+      $username = 'dbu1598703';
+      $password = 'Nemat1319';
+      $database = 'dbs12003862';
+
+      $conn = new mysqli($host_name, $username, $password, $database);
+
+      if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+      }
+      $sql = "SELECT * FROM paintings ORDER BY RAND() LIMIT 7";
+      $result = $conn->query($sql);
+    ?>
 </head>
 
 <body>
@@ -34,11 +48,19 @@
                     </p>
                     <p class="dif animE">With Paintings</p>
                   </div>
-                  <p class="ldec animE">Visit my latest colections and painting in art works. </p>
+                  <p class="ldec animE">Check my latest colections and painting in art works. </p>
                   <button onclick="window.location.href='/gallery.html'" class="brg animE">Brows Gallery</button>
                 </div>
                 <div class="slideshow-container animE">
-
+                  <?php
+                    if ($result->num_rows > 0) {
+                      while($row = $result->fetch_assoc()) {
+                          echo "<div class='mySlides fade'><img src='images/paintings/" . $row['image'] . "' style='width:100%'></div>";
+                      }
+                    } else {
+                        echo "no paintings";
+                    }
+                  ?>
                   <div class="mySlides fade">
                     <img src="images/A.jpg" style="width:100%">
                   </div>
@@ -74,11 +96,11 @@
         </section>
         <section class="section s3">
             <div class="design1">
-                <img class="anim3" src="./images/D.jpg" alt="house">
+                <img class="anim3" src="./images/paintings/2.jpeg" alt="house">
                 <div class="card1">
                     <div class="cardtext">
-                      <h2 class="anim3">pink Flower</h2>
-                      <p class="anim3">(Description here)</p>
+                      <h2 class="anim3">Flower Collection</h2>
+                      <p class="anim3">12 x 12 inches<br>Acrylic paint on wood panel</p>
                     </div>
                 </div>
             </div>
@@ -87,28 +109,22 @@
           <div class="design2">
             <div class="card2">
                 <div class="cardtext">
-                  <h2 class="anim4">Blue Flower</h2>
-                  <p class="anim4">(Description here)</p>
+                  <h2 class="anim4">Flower Collection</h2>
+                  <p class="anim4">16 x 16 inches<br>Acrylic paint on galley canvas</p>
                 </div>
             </div>
-            <img class="anim4" src="./images/B.jpg" alt="house">
+            <img class="anim4" src="./images/paintings/7.jpeg" alt="house">
           </div>
         </section>
         <section class="section s5">
             <div class="about">
                 <div class="social-btns">
-                    <!-- <a class="anim5 btn facebook" href="#">
-                        <i class="fa fa-facebook"></i>
-                    </a> -->
                     <a class="anim5 btn instagram" href="https://www.instagram.com/raheleh_artstudio">
                         <i class="fa fa-instagram"></i>
                     </a>
                     <a class="anim5 btn google" href="mailto:Raheleh.mirheydari@gmail.com">
                         <i class="fa fa-google"></i>
                     </a>
-                    <!-- <a class="anim5 btn linkedin" href="#">
-                        <i class="fa fa-linkedin"></i>
-                    </a> -->
                 </div>
                 <div class="touch anim5">
                     <p>Get In Touch</p>
@@ -123,6 +139,9 @@
     <script src="./scroll/fullpage.min.js"></script>
     <script src="./scroll/app.js"></script>
     <script src="./js/script.js"></script>
+    <?php
+      $conn->close();
+    ?>
 </body>
 
 </html>

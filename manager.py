@@ -1,18 +1,41 @@
 import pysftp
-import mysql.connector
+from tkinter import *
+from tkinter import filedialog as fd
+from tkinter.messagebox import showinfo
 
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="yourusername",
-  password="yourpassword"
+root = Tk()
+root.title('Upload file')
+root.resizable(False, False)
+root.geometry("300x150")
+
+def select_file():
+    filename = fd.askopenfilename(
+        title='Open a file',
+        initialdir='/home/dimo/Documents/'
+    )
+
+    showinfo(
+        title='Selected File',
+        message=filename
+    )
+    srv = pysftp.Connection(
+        host="access969539652.webspace-data.io",
+        username="u112911477",
+        password="Ry@nR0j@n2013SFTP",
+        log="./pysftp.log",
+    )
+
+    with srv.cd('/images/paintings/'):
+        srv.put(filename)
+    srv.close()
+
+open_button = Button(
+    root,
+    text='Open File',
+    command=select_file
 )
 
-print(mydb)
+open_button.pack(expand=True)
 
-# srv = pysftp.Connection(host="www.destination.com", username="root",
-# password="password",log="./pysftp.log")
+root.mainloop()
 
-# with srv.cd('/'):
-#     srv.get('remote_file')
-
-# srv.close()

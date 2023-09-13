@@ -80,7 +80,7 @@ body {
 
 .painting {
     width: 40%;
-    max-height: 35vw;
+    /* max-height: 35vw; */
     margin-top: 3%;
 }
 
@@ -102,12 +102,13 @@ body {
 
 .description {
     width: 60%;
-    font-size: 16px;
+    font-size: 18px;
     /* color: rgba(255, 255, 255, 0.91); */
     color: rgba(0, 0, 0, 0.91);
     line-height: 1.7;
     margin-left: 5px;
     margin-top: 5%;
+    white-space: pre-wrap;
 }
 
 .price {
