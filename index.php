@@ -117,22 +117,48 @@
           </div>
         </section>
         <section class="section s5">
-            <div class="about">
-                <div class="social-btns">
-                    <a class="anim5 btn instagram" href="https://www.instagram.com/raheleh_artstudio">
-                        <i class="fa fa-instagram"></i>
-                    </a>
-                    <a class="anim5 btn google" href="mailto:Raheleh.mirheydari@gmail.com">
-                        <i class="fa fa-google"></i>
-                    </a>
-                </div>
-                <div class="touch anim5">
-                    <p>Get In Touch</p>
-                </div>
-                <div class="copyright anim5">
-                    <p>Copyright © 2023 Rahele Mirheydari</p>
-                </div>
+          <div class="about">
+            <h1 class="ctext">Contanct Me</h1>
+            <div class="crow">
+              <img class="contactimg" src="/images/contact_me.jpg" alt="contact me">
+              <div class="ccolumn">
+                  <h3 class="l2">Write a Message</h3>
+                  <div class="lt">
+                      <form class="form-horizontal" method="post" action="">
+                          <div class="form-group">
+                              <div class="col-sm-12">
+                                  <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" />
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <div class="col-sm-12">
+                                  <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" />
+                              </div>
+                          </div>
+
+                          <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message"></textarea>
+
+                          <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                              <i class="fa fa-paper-plane"></i>
+                              <span class="send-text">SEND</span>
+                          </button>
+                      </form>
+                  </div>
+                  <div class="row contact_links">
+                      <div class="row">
+                          <!-- <p class="alable">Instagram </p> -->
+                          <a href="https://www.instagram.com/raheleh_artstudio" class="links"><i class="fa fa-instagram fa-2x"></i></a>
+                      </div>
+                      <div class="row email">
+                          <!-- <p class="alable">Email </p> -->
+                          <a href="mailto:raheleh.mirheydari@gmail.com" class="links"><i class="fa fa-envelope fa-2x"></i></a>
+                      </div>
+                  </div>
+                  <p class="copyright">Copyright © 2023 Raheleh Mirheydari </p>
+              </div>
             </div>
+          </div>
         </section>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
