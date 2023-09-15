@@ -21,7 +21,6 @@
     src: url(../fonts/RichieBrusher-l2yy.ttf);
 }
 
-
 /* */
 
 html {
@@ -122,7 +121,7 @@ body {
 
 .ldec {
     width: 425px;
-    margin: 20px 0 0 6%;
+    margin: 120px 0 0 6%;
     font-size: 26px;
     line-height: 1.5;
 }
@@ -270,8 +269,8 @@ span {
 }
 
 .portrait {
-    width: 307px;
-    height: 307px;
+    width: 357px;
+    height: 357px;
     border-radius: 15px;
     margin-left: 20px;
     margin-bottom: auto;
@@ -282,6 +281,10 @@ span {
 @media only screen and (max-width: 1200px){
     .rrow {
         margin: 0 8%;
+    }
+    .portrait {
+        width: 307px;
+        height: 307px;
     }
 }
 
@@ -518,11 +521,11 @@ textarea {
 }
 
 #name {
-    height: 25px;
+    height: 30px;
 }
 
 #email {
-    height: 25px;
+    height: 30px;
 }
 
 .form-control{
@@ -669,116 +672,12 @@ textarea {
     .rerow {
         flex-direction: column;
     }
-    .ldec {
+    /* .ldec {
         display: none;
-    }
+    } */
     .text1 {
         margin: 10px 0 0 6%;
     }
-}
-
-/* Social Buttons */
-
-.social-btns .btn,
-.social-btns .btn:before,
-.social-btns .btn .fa {
-  transition: all 0.35s;
-  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
-}
-.social-btns .btn:before {
-  top: 90%;
-  left: -110%;
-}
-.social-btns .btn .fa {
-  transform: scale(0.8);
-}
-.social-btns .btn.facebook:before {
-  background-color: #3b5998;
-}
-.social-btns .btn.facebook .fa {
-  color: #3b5998;
-}
-.social-btns .btn.instagram:before {
-  background-color: #833AB4;
-}
-.social-btns .btn.instagram .fa {
-  color: #833AB4;
-}
-.social-btns .btn.google:before {
-  background-color: #dc4a38;
-}
-.social-btns .btn.google .fa {
-  color: #dc4a38;
-}
-.social-btns .btn.linkedin:before {
-  background-color: #0e76a8;
-}
-.social-btns .btn.linkedin .fa {
-  color: #0e76a8;
-}
-.social-btns .btn:focus:before,
-.social-btns .btn:hover:before {
-  top: -10%;
-  left: -10%;
-}
-.social-btns .btn:focus .fa,
-.social-btns .btn:hover .fa {
-  color: #fff;
-  transform: scale(1);
-}
-.social-btns {
-  height: 80px;
-  margin: auto;
-  font-size: 0;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.social-btns .btn {
-  display: inline-block;
-  background-color: #fff;
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  margin: 0 25px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  border-radius: 28%;
-  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
-  opacity: 0.99;
-}
-.social-btns .btn:before {
-  content: '';
-  width: 120%;
-  height: 120%;
-  position: absolute;
-  transform: rotate(45deg);
-}
-.social-btns .btn .fa {
-  font-size: 38px;
-  vertical-align: middle;
-}
-
-@media only screen and (max-width: 600px) {
-    .touch {
-        width: 220px;
-        height: 120px;
-        font-size: 45px;
-        left: 10%;
-    }
-    .social-btns .btn {
-        margin: 0 10px;
-      }
-}
-
-@media only screen and (max-width: 405px) {
-    .social-btns .btn {
-        margin: 20px 28px;
-      }
 }
 
 /* media queries */

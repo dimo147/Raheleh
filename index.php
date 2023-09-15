@@ -43,10 +43,10 @@
               <div class="rerow">
                 <div class="column">
                   <div class="text1">
-                    <p class="audiowide animE">
+                    <!-- <p class="audiowide animE">
                         Design your home
                     </p>
-                    <p class="dif animE">With Paintings</p>
+                    <p class="dif animE">With Paintings</p> -->
                   </div>
                   <p class="ldec animE">Check my latest colections and painting in art works. </p>
                   <button onclick="window.location.href='/gallery.html'" class="brg animE">Brows Gallery</button>
