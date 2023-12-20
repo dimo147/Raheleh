@@ -1,6 +1,10 @@
+<?php
+require_once 'config.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script src="https://www.paypal.com/sdk/js?client-id=<?php echo PAYPAL_SANDBOX?PAYPAL_SANDBOX_CLIENT_ID:PAYPAL_PROD_CLIENT_ID; ?>&currency=<?php echo $currency; ?>"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +49,10 @@
             <p class="description"><?php echo $painting["description"]; ?></p>
             <div class="row pricebox">
                 <p class="price">$ <?php echo $painting["price"]; ?></p>
-                <button class="button">
+                <div id="paymentResponse" class="hidden"></div>
+        
+                <div id="paypal-button-container"></div>
+                <!-- <button class="button">
                     <span class="button__text">
                       <span>buy now</span>
                     </span>
@@ -75,7 +82,7 @@
                       </g>
                   
                     </svg>
-                </button>
+                </button> -->
             </div>
         </div>
     </div>
@@ -100,5 +107,73 @@
       $conn->close();
     ?>
     <script src="./js/shop.js"></script>
+    <script>
+      paypal.Buttons({
+        createOrder: (data, actions) => {
+          return actions.order.create({
+            "purchase_units": [{
+              "custom_id": "<?php echo $_GET['p']; ?>",
+              "description": "<?php echo $painting["name"]; ?>",
+              "amount": {
+                "currency_code": "<?php echo $currency; ?>",
+                "value": <?php echo $painting["price"]; ?>,
+                "breakdown": {
+                  "item_total": {
+                    "currency_code": "<?php echo $currency; ?>",
+                    "value": <?php echo $painting["price"]; ?>,
+                  }
+                }
+              },
+              "items": [
+                {
+                  "name": "<?php echo $painting["name"]; ?>",
+                  "description": "<?php echo $painting["description"]; ?>",
+                  "unit_amount": {
+                    "currency_code": "<?php echo $currency; ?>",
+                    "value": <?php echo $painting["price"]; ?>,
+                  },
+                  "quantity": "1",
+                  "category": "PHYSICAL_GOODS",
+                },
+              ]
+            }]
+          });
+        },
+        onApprove: (data, actions) => {
+          return actions.order.capture().then(function(orderData) {
+            var postData = {paypal_order_check: 1, order_id: orderData.id};
+            fetch('paypal_checkout_validate.php', {
+                method: 'POST',
+                headers: {'Accept': 'application/json'},
+                body: encodeFormData(postData)
+            })
+            .then((response) => response.json())
+            .then((result) => {
+                if(result.status == 1){
+                    window.location.href = "payment-status.php?checkout_ref_id="+result.ref_id;
+                }else{
+                    const messageContainer = document.querySelector("#paymentResponse");
+                    messageContainer.classList.remove("hidden");
+                    messageContainer.textContent = result.msg;
+                    
+                    setTimeout(function () {
+                        messageContainer.classList.add("hidden");
+                        messageText.textContent = "";
+                    }, 5000);
+                }
+            })
+            .catch(error => console.log(error));
+          });
+        }
+      }).render("#paypal-button-container");
+      const encodeFormData = (data) => {
+        var form_data = new FormData();
+
+        for (var key in data) {
+          form_data.append(key, data[key]);
+        }
+        return form_data
+      }
+    </script>
 </body>
 </html>

@@ -13,7 +13,7 @@
         <div class="pages">
             <a href="/">Home</a>
             <a class="active" href="">Art works</a>
-            <a href="/#Raheleh_Mirheydari">About</a>
+            <a href="events.html">Events</a>
             <a href="/#about">Contact</a>
         </div>
     </div>

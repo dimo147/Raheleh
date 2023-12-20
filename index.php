@@ -34,7 +34,7 @@
               <div class="pages">
                 <a class="active anim1" href="home/">Home</a>
                 <a class="anim1" href="gallery.php">Art works</a>
-                <a class="anim1" href="#Raheleh_Mirheydari">About</a>
+                <a class="anim1" href="events.html">Events</a>
                 <a class="anim1" href="#about">Contact</a>
               </div>
             </div>
@@ -61,18 +61,7 @@
                         echo "no paintings";
                     }
                   ?>
-                  <div class="mySlides fade">
-                    <img src="images/A.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides fade">
-                    <img src="images/B.jpg" style="width:100%">
-                  </div>
-                  
-                  <div class="mySlides fade">
-                    <img src="images/G.jpg" style="width:100%">
-                  </div>
-                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -120,7 +109,7 @@
           <div class="about">
             <h1 class="ctext">Contanct Me</h1>
             <div class="crow">
-              <img class="contactimg" src="/images/contact_me.jpg" alt="contact me">
+              <img class="contactimg" src="/images/paintings/B.jpg" alt="contact me">
               <div class="ccolumn">
                   <h3 class="l2">Write a Message</h3>
                   <div class="lt">

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    color: black;
+    background-color: #EBF5EE;
+    padding: 0 6%;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.hide {
+    display: none !important;
+}
+
+
+.logo {
+    margin: 0;
+    margin-right: auto;
+    padding: 8px 16px 18px 0;
+    font-family: 'Marck Script', cursive;
+    font-size: 28px;
+}
+
+.topnav {
+    display: flex;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.pages {
+    display: flex;
+    margin-right: auto;
+}
+
+.topnav a {
+    margin-left: 50px;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 18px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.topnav a:hover {
+    color: rgb(54, 54, 54);
+}
+  
+.topnav a.active {
+    color: rgb(255, 255, 255);
+}
+
+.wrap {
+    width: 100%;
+    display: flex;
+    margin-top: 3%;
+}
+
+.banner {
+    width: 50%;
+    height: auto;
+}
+
+.desc {
+    width: 50%;
+    padding-left: 30px;
+}
+
+.desc h1 {
+    font-size: 32px;
+}
+
+.desc h1 span{
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+.desc {
+    font-size: 20px;
+}
+
+.date {
+    font-size: 24px;
+}
+
+@media screen and (max-width: 850px){
+    .wrap {
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .banner {
+        width: 100%;
+    }
+    body {
+        padding: 0 4%;
+    }
+    .desc {
+        width: 100%;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 550px) {
+    .topnav a {
+        margin-left: 0;
+        padding: 12px 0;
+    }
+    .pages {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        text-align: right;
+    }
+}
